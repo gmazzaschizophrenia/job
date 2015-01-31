@@ -1,0 +1,81 @@
+%% cv.tex --- Example of CurVe usage.
+
+%% Copyright (C) 2000, 2001, 2002, 2003, 2004 Didier Verna.
+
+%% PRCS: $Id: cv.tex 1.6 Fri, 06 Feb 2004 17:39:26 +0100 didier $
+
+%% Author:        Didier Verna <didier@lrde.epita.fr>
+%% Maintainer:    Didier Verna <didier@lrde.epita.fr>
+%% Created:       Thu Dec 10 16:04:01 2000
+%% Last Revision: Fri Feb  6 17:27:21 2004
+
+%% This file is part of CurVe.
+
+%% CurVe may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.1
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%% http://www.latex-project.org/lppl.txt
+%% and version 1.1 or later is part of all distributions of LaTeX
+%% version 1999/06/01 or later.
+
+%% CurVe consists of the files listed in the file `README'.
+
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass{curve}
+
+
+%% \leftheader{Left Header\\
+%%   Put the information\\
+%%   you want about yourself here}
+\leftheader{
+\Large{\textbf{Giuseppe Mazza,}} \\
+curriculum vitae
+}
+
+
+%% \rightheader{Right Header\\
+%%   Idem}
+\rightheader{\ }
+
+\headerscale{0.6}
+
+%% \photoscale{0.2}
+%% \photo[r]{image/gmazza.eps}
+
+\photoscale{0.3}
+% \photo[r]{image/vespa.ps}
+
+
+
+
+%% \title{Giuseppe Mazza}
+%% \subtitle{curriculum vitae}
+
+\begin{document}
+
+\makeheaders[t]
+%%\maketitle
+
+%%\makerubric{rubric}
+%%\makerubric{anagraphic_data}
+\makerubric{rubric/personal}
+\makerubric{rubric/education}
+\makerubric{rubric/work}
+\makerubric{rubric/skills}
+\makerubric{rubric/languages}
+%% \makerubric{rubric/misc}
+\makerubric{rubric/interests}
+\makerubric{rubric/referees}
+
+
+
+% \small{I authorize to handle my data in
+% accordance with the provisions of the Italian law 675/96
+% (``Tutela della privacy'')
+% }
+
+\end{document}
+
+%% cv.tex ends here.
