@@ -1,0 +1,39 @@
+
+%*********************DEFINIZIONI*********************************
+
+%Ridefinizione della data
+% \renewcommand{\date}{\def\today{\number\day \space\ifcase\month\or
+% Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or
+% Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi,
+% \number\year}}
+\renewcommand{\date}{\def\today{\month \space \number\day, \number\year}}
+
+%Definizione del comando \OPEN che a differenza del comando \OPENING
+%scrive a sinistra l'intestazione e la data e a destra il destinatario.
+\def\open#1{\ifx\@empty\fromaddress
+\thispagestyle{firstpage}
+{\raggedright\today\par}
+\else
+\thispagestyle{empty}
+{\raggedright\begin{tabular}{l}\ignorespaces\fromaddress \\ *[2\parskip] 
+\today \end{tabular}\par}
+\fi
+\vspace{2\parskip}
+{\raggedleft \toname \\ \toaddress \par}\vspace{2\parskip}
+#1\par\nobreak}
+
+%Definizione del comando \CLOSE che a differenza di \CLOSING
+%scrive a destra l'autore della lettera.
+\long\def\close#1{\par\nobreak\vspace{\parskip}
+\stopbreaks
+\noindent
+\parbox{\indentedwidth}{\raggedright
+\ignorespaces #1 \\ [6\parskip] \par}
+\par\ifx\@empty{\raggedleft \fromsig
+\fromname\par}
+\else 
+{\raggedleft \fromsig\par} 
+\fi \par}
+
+%***********************FINE DEFINIZIONI*****************************
+
